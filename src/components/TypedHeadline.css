@@ -1,0 +1,6 @@
+.typed-word { display: inline-block; }
+.typed-word--accent { color: var(--green); text-shadow: 0 0 24px #00ff3c30; }
+.typed-letter { opacity: 0; animation: reveal-letter 1ms step-end forwards; animation-delay: var(--letter-delay); }
+.headline-cursor { display: inline-block; width: .18em; height: .8em; margin-left: .1em; background: var(--green); opacity: 0; animation: reveal-letter 1ms 1.9s forwards, caretBlink 1s 1.9s steps(2, start) infinite; }
+@keyframes reveal-letter { from, to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .typed-letter { opacity: 1; animation: none; } .headline-cursor { opacity: 1; animation: none; } }

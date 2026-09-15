@@ -1,0 +1,99 @@
+.skill-circuit { position: relative; width: 100%; aspect-ratio: 600 / 490; container-type: inline-size; isolation: isolate; background: radial-gradient(ellipse at 50% 48%, #00f99712, transparent 65%); }
+.circuit-wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.circuit-decoration { stroke: #00e977; stroke-width: 1; opacity: .22; color: #00ff85; }
+.circuit-traces { stroke: #00e99a; stroke-width: 1.6; stroke-linejoin: bevel; filter: drop-shadow(0 0 3px #00ff8050); }
+.circuit-terminals { color: #85ff68; filter: drop-shadow(0 0 4px #00ff90); }
+
+
+.circuit-chip { position: absolute; width: 16.667%; height: 20.408%; left: 41.667%; top: 38.775%; }
+.chip-core { position: absolute; inset: 0; display: grid; place-items: center; border: 2px solid #00d3a1; border-radius: 8px; background: linear-gradient(135deg, #08271e, #010805 65%); box-shadow: inset 0 0 0 5px #04130d, inset 0 0 18px #00ff8820, 0 0 24px #00ff8826; }
+.chip-core img { width: 88%; height: 88%; object-fit: contain; }
+.chip-pins { position: absolute; inset: 12% -8%; background: repeating-linear-gradient(to bottom, #00ecaf 0 3px, transparent 3px 10px); }
+.chip-pins--vertical { inset: -8% 12%; background: repeating-linear-gradient(to right, #82ef63 0 3px, transparent 3px 10px); }
+.circuit-category { position: absolute; width: 29%; padding: 2.3%; border: 1px solid #00e98850; border-radius: 12px 3px 12px 3px; background: linear-gradient(145deg, #031a10ec, #020a07f5); box-shadow: inset 0 0 20px #00ef6510; }
+.circuit-category h2 { color: #00e99a; text-transform: uppercase; font-size: 2.1cqw; letter-spacing: .04em; margin: 0 0 10%; font-weight: 700; }
+.circuit-category ul { display: grid; gap: 8px; list-style: none; }
+.circuit-category--frontend { top: 4%; left: 1.7%; }
+.circuit-category--backend { top: 4%; right: 1.7%; }
+.circuit-category--data { top: 58%; left: 1.7%; }
+.circuit-category--deploy { top: 58%; right: 1.7%; }
+.circuit-category--ai { top: 79%; left: 35.5%; }
+.circuit-category--ai h2 { font-size: 1.65cqw; letter-spacing: 0; }
+.circuit-skill { display: flex; align-items: center; gap: 8%; padding: 8%; border: 1px solid #00d6a43b; border-radius: 5px; background: #010b0c; font-size: 1.9cqw; font-weight: 600; white-space: nowrap; color: #d6e3df; transition: border-color .2s, background .2s; }
+.circuit-skill:hover { border-color: #00edaa; background: #06221a; }
+.circuit-skill svg, .circuit-skill img { width: 4.4cqw; height: 4.4cqw; flex-shrink: 0; }
+.circuit-skill img { filter: none; }
+.react { color: #61dafb; } .node { color: #83cd29; } .tailwind { color: #38bdf8; } .django { color: #44b78b; } .postgres { color: #7ca9d1; } .gunicorn { color: #7cc576; } .nginx { color: #36ca70; }
+.circuit-skill span { color: #d6e3df; }
+.javascript { color: #f7df1e; }
+.python { color: #65a9dc; }
+.codex { color: #fff; }
+.mobile-circuit-traces { display: none; }
+@media (max-width: 600px) {
+  .skill-circuit { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; aspect-ratio: auto; padding: 70px 0 30px; background: radial-gradient(ellipse at 50% 15%, #00f99715, transparent 65%); }
+  .circuit-wires { display: none; }
+  .mobile-circuit-traces { display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+  .circuit-chip { position: relative; top: auto; left: auto; width: 92px; height: 92px; justify-self: center; margin: 0 0 30px; }
+  .circuit-category { position: relative; inset: auto; width: calc(100% - 80px); max-width: 300px; justify-self: center; padding: 14px; margin: 0; background: linear-gradient(145deg, #031a10, #020a07); }
+  .circuit-category h2, .circuit-category--ai h2 { font-size: .7rem; margin-bottom: 12px; }
+  .circuit-skill { font-size: .75rem; padding: 10px 8px; gap: 8px; }
+  .circuit-skill svg, .circuit-skill img { width: 22px; height: 22px; }
+  .circuit-category ul { gap: 7px; }
+}
+@media (max-width: 350px) {
+  .circuit-category { width: calc(100% - 60px); padding: 10px; }
+  .circuit-skill { font-size: .68rem; gap: 6px; }
+}
+/* Layered package, etched surface and restrained metallic contacts. */
+.chip-core { border: 1px solid #49dcb0; border-radius: 5px; background: radial-gradient(ellipse at 25% 15%, #12634c44, transparent 65%), repeating-linear-gradient(0deg, #ffffff03 0 1px, transparent 1px 4px), linear-gradient(135deg, #0a211b, #020806 65%); box-shadow: inset 0 0 0 4px #020907, inset 0 0 0 5px #164837, inset 0 1px 14px #47ffc21c, 0 0 0 3px #031610, 0 8px 22px #000a, 0 0 22px #00d99a20; }
+.chip-core::before { content: ''; position: absolute; inset: 10px; border: 1px solid #528d7426; border-radius: 2px; pointer-events: none; }
+.chip-core::after { content: ''; position: absolute; left: 10px; top: 10px; width: 3px; height: 3px; border-radius: 50%; background: #81bca8; box-shadow: 0 0 4px #00efa577; }
+.chip-core img { position: relative; width: 82%; height: 82%; }
+.chip-pins { background: repeating-linear-gradient(to bottom, #4fc69f 0 2px, #194c3a 2px 3px, transparent 3px 10px); }
+.chip-pins--vertical { background: linear-gradient(to bottom, #70501f 0%, #d6ae58 2%, #fff0b0 4%, #ac7c2e 7%, #62451d 10%, #62451d 90%, #ba8a35 93%, #f4dc91 96%, #c49a46 98%, #70501f 100%); -webkit-mask-image: repeating-linear-gradient(to right, #000 0 3px, transparent 3px 10px); mask-image: repeating-linear-gradient(to right, #000 0 3px, transparent 3px 10px); }
+.circuit-traces { stroke-width: 1.25; filter: drop-shadow(0 0 2px #00ff8030); }
+.circuit-terminals { filter: drop-shadow(0 0 3px #00ff9060); }
+
+
+/* Expanded hero stack: paired categories around the central processor. */
+.skill-circuit .typescript { color: #3178c6; }
+.skill-circuit .html5 { color: #e34f26; }
+.skill-circuit .css { color: #1572b6; }
+.skill-circuit .git { color: #f05032; }
+.skill-circuit .github, .skill-circuit .rest, .skill-circuit .llm { color: #e6f1f4; }
+@media (min-width: 601px) {
+  .skill-circuit .circuit-chip { width: 13%; height: 15.92%; left: 43.5%; top: 43%; }
+  .skill-circuit .circuit-category { width: 39%; padding: 2%; }
+  .skill-circuit .circuit-category h2 { font-size: 2cqw; margin-bottom: 8px; }
+  .skill-circuit .circuit-category--ai h2 { font-size: 1.75cqw; }
+  .skill-circuit .circuit-category ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .skill-circuit .circuit-category--data ul { grid-template-columns: 1fr; }
+  .skill-circuit .circuit-category--tools ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .skill-circuit .circuit-skill { min-width: 0; font-size: 1.65cqw; padding: 9px 5px; gap: 5px; }
+  .skill-circuit .circuit-skill svg, .skill-circuit .circuit-skill img { width: 3cqw; height: 3cqw; }
+  .skill-circuit .circuit-category--frontend { left: 0; top: 6%; }
+  .skill-circuit .circuit-category--backend { right: 0; top: 6%; }
+  .skill-circuit .circuit-category--data { left: 0; top: 51%; }
+  .skill-circuit .circuit-category--deploy { right: 0; top: 51%; }
+  .skill-circuit .circuit-category--tools { left: 0; top: 77%; }
+  .skill-circuit .circuit-category--ai { left: auto; right: 0; top: 77%; }
+}
+
+/* Spaced routing corridors and layered green package. */
+@media (min-width: 601px) {
+.skill-circuit { aspect-ratio: 600 / 450; }
+.skill-circuit .circuit-category { width: 35%; }
+.skill-circuit .circuit-category--frontend { left: 1%; }
+.skill-circuit .circuit-category--backend { right: 1%; }
+.skill-circuit .circuit-category--data { left: 0; top: 51%; width: 30%; }
+.skill-circuit .circuit-category--deploy { right: 0; top: 51%; width: 32%; }
+.skill-circuit .circuit-category--tools { left: 4%; top: 79%; width: 37%; }
+.skill-circuit .circuit-category--ai { right: 1%; top: 79%; width: 36%; }
+.skill-circuit .circuit-chip { left: 44%; top: 44%; width: 14%; height: 18.667%; }
+.skill-circuit .circuit-skill { font-size: 1.5cqw; gap: 4px; padding: 8px 4px; }
+.skill-circuit .circuit-skill svg, .skill-circuit .circuit-skill img { width: 2.8cqw; height: 2.8cqw; }
+}
+.skill-circuit .chip-core { border-color: #00ed9d; border-radius: 9px; background: radial-gradient(ellipse at 50% 12%, #004e2b55, transparent 75%), #010a06; box-shadow: inset 0 0 0 4px #010b07, inset 0 0 0 5px #00a86c, 0 0 0 3px #063524, 0 0 17px #00ed9a22; }
+.skill-circuit .chip-core::before { inset: 8px; border-color: #00e68a80; border-radius: 4px; }
+.skill-circuit .chip-pins--horizontal { background: repeating-linear-gradient(to bottom, #ffe7a0 0 2px, #b99743 2px 3px, transparent 3px 10px); }
+.skill-circuit .circuit-traces { stroke: #00ef93; stroke-width: 1; stroke-linejoin: round; }
